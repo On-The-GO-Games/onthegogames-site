@@ -1,0 +1,56 @@
+:root{--bg:#FBF3E4;--card:#FFFCF7;--ink:#3B2B1E;--ink-soft:#8C7660;--line:#ECDDC4;--accent:#F5A42E;--accent-ink:#7A4300;--accent-soft:#FDEBCB;--green:#34B67A;--green-dark:#1E8452;}
+*{box-sizing:border-box;}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.6;}
+main{max-width:860px;margin:0 auto;padding:0 20px 56px;}
+h1,h2,h3{font-family:'Fredoka',sans-serif;line-height:1.15;}
+h1{font-size:38px;margin:0 0 8px;}
+h2{font-size:24px;margin:34px 0 10px;}
+h3{font-size:19px;margin:0 0 6px;}
+p,li{margin:0 0 12px;}
+ul,ol{padding-left:22px;margin:0 0 12px;}
+a{color:var(--accent-ink);font-weight:700;}
+.meta{color:var(--ink-soft);font-weight:700;font-size:14px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:22px;}
+.note{background:var(--accent-soft);border-radius:14px;padding:12px 14px;font-weight:700;margin:14px 0;}
+
+/* header + wordmark (the On the GO GAMES mark, no game logo) */
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 0 6px;flex-wrap:wrap;}
+.wordmark{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--ink);font-family:'Fredoka',sans-serif;}
+.wordmark .on{font-size:20px;font-weight:600;color:#9a6a2e;}
+.wordmark .go{font-size:30px;font-weight:700;color:#fff;background:var(--green);padding:0 12px 2px;border-radius:12px;line-height:1.15;box-shadow:0 4px 0 var(--green-dark);}
+.wordmark .games{font-size:12px;font-weight:600;letter-spacing:5px;color:#bb8c52;margin-left:2px;}
+nav.top{display:flex;flex-wrap:wrap;gap:8px 16px;}
+nav.top a{text-decoration:none;font-weight:800;padding:6px 2px;}
+
+/* hero */
+.hero{margin:34px 0 8px;}
+.hero h1{font-size:44px;max-width:16ch;}
+.hero p{font-size:19px;max-width:52ch;color:#5b4632;}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none;}
+.pills li{margin:0;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:800;font-size:15px;}
+
+/* what we make */
+.kinds{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:10px;}
+.kind{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;}
+.kind .k{width:40px;height:40px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:12px;}
+.kind .k svg{width:22px;height:22px;}
+.kind p{margin:0;color:#5b4632;font-size:15px;}
+
+/* games showcase */
+.games{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px;}
+.game{display:block;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;text-decoration:none;color:var(--ink);}
+.game:hover{border-color:var(--accent);}
+.game .gstatus{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;background:var(--accent-soft);color:var(--accent-ink);border-radius:999px;padding:3px 9px;margin-bottom:10px;}
+.game p{margin:0;color:#5b4632;font-size:15px;}
+.empty{grid-column:1/-1;text-align:center;padding:34px 20px;}
+.empty b{font-family:'Fredoka',sans-serif;font-size:22px;display:block;margin-bottom:6px;}
+.empty p{margin:0;color:var(--ink-soft);}
+
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--ink-soft);font-size:14px;font-weight:700;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;}
+footer nav a{color:var(--ink-soft);}
+
+@media (max-width:640px){
+  .kinds{grid-template-columns:1fr;}
+  .games{grid-template-columns:1fr;}
+  .hero h1{font-size:36px;}
+}
